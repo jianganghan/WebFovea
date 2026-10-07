@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets: put your key in an env var (VLM_API_KEY), never in config.json
+.env
+.env.*
+config.local.json
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Run outputs
+runs/
+test_results/
+logs/
