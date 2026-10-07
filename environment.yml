@@ -1,0 +1,25 @@
+# Conda environment for WebFovea.
+#   conda env create -f environment.yml && conda activate webfovea
+#   playwright install chromium
+# pip-only users: pip install -r requirements.txt (same packages, same bounds).
+
+name: webfovea
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10              # CI tests 3.10 and 3.12
+  - pip
+  # Upper bounds only block major-version jumps; they do not pin minor versions.
+  # Exact pins copied from a newer local Python would break on 3.10, while an
+  # unbounded install lets a new major release silently change behaviour
+  # (e.g. Playwright's select_option / evaluate_handle) between two runs.
+  - pip:
+      - playwright<2         # CDP connection, select_option, evaluate_handle
+      - openai<4             # OpenAI-compatible client, pointed at the Anthropic endpoint
+      - numpy<3
+      - opencv-python<6      # only used to draw debug overlays on trajectory screenshots
+      - Pillow<13
+      - requests<3

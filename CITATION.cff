@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use WebFovea, please cite the technical report."
+title: "WebFovea"
+authors:
+  - family-names: Han
+    given-names: Jiangang
+license: MIT
+repository-code: "https://github.com/jianganghan/WebFovea"
+preferred-citation:
+  type: report
+  title: "WebFovea: When the Model Is Right but the Click Is Wrong -- Reliable Round Trips for Vision-Based Web Agents on Live Websites"
+  authors:
+    - family-names: Han
+      given-names: Jiangang
+  year: 2026
+  doi: "10.48550/arXiv.2610.03036"
+  url: "https://arxiv.org/abs/2610.03036"
